@@ -47,10 +47,13 @@ export default connect(mapStateToProps)(NotesList); */
 function NotesList() {
 
     const [notes, setNotes] = useState(store.getState().notes);
+    const [count, setCount] = useState(store.getState().count)
     store.subscribe(() => setNotes(store.getState().notes));
+    store.subscribe(() => setCount(store.getState().count));
 
     return(
         <div className={styles.container}>
+            <p> Count notes = {count}</p>
             {notes && notes.map(el => <p key={`note_${el.id}`}>{el.text}</p>)}
         </div>
     );

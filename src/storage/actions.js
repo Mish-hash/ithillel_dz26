@@ -1,5 +1,6 @@
 export const ACTIONS = {
     ADD_NOTE: 'ADD_NOTE',
+
 };
 
 export function addNote(text) {
@@ -8,3 +9,4 @@ export function addNote(text) {
         value: text,
     }
 }
+
