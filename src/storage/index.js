@@ -17,7 +17,7 @@ function reduser(state, action) {
             state.notes = [...state.notes, {id: Date.now(), text: action.value}];
             state.count = state.count + 1;
             console.log(state)
-            return state;
+            return {...state};
         default: return state;
     }
 }
